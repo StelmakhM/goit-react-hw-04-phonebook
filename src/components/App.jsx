@@ -16,9 +16,7 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    if (contacts.length > 0) {
-      localStorage.setItem('contacts', JSON.stringify(contacts));
-    }
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const normalizeValue = value => value.toLowerCase().trim();
